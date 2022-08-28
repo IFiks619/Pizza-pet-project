@@ -14,12 +14,12 @@ import { fetchPizzas } from "../redux/slices/pizzaSlice.js";
 import { useRef } from "react";
 
 
-const Home = ({ searchValue }) => {
+const Home = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const isMounted = useRef(false)
 
-    const { categoryId, sort, currentPage } = useSelector(state => state.filter)
+    const { searchValue, categoryId, sort, currentPage } = useSelector(state => state.filter)
     const { items, status } = useSelector(state => state.pizza)
 
     const [isLoading, setIsLoading] = useState(true)

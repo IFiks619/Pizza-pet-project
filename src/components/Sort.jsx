@@ -16,8 +16,8 @@ function Sort() {
   const [openPopup, setOpenPopup] = useState(false)
 
   useEffect(() => {
-    const handleClickOutside =e => {
-      if(!e.path.includes(sortRef.current)){
+    const handleClickOutside = e => {
+      if (!e.path.includes(sortRef.current)) {
         setOpenPopup(false)
       }
     }
